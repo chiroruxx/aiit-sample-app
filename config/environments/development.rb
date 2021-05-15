@@ -62,4 +62,8 @@ Rails.application.configure do
   
   # Allow access to Cloud9
   config.hosts.clear
+  
+  config.action_mailer.raise_delivery_errors = false
+  host = '1ff2b601cc0d40359da4a155781bd85b.vfs.cloud9.ap-northeast-1.amazonaws.com/'
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 end
